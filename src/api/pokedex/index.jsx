@@ -20,13 +20,15 @@ export default function GetPokemon() {
   return (
     <div>
       <h1>Digite o nome de um pokemon:</h1>
-      <input
-        type="text"
-        onChange={(e) => {
-          setPokemon(e.target.value);
-        }}
-      ></input>
-      <button onClick={handleSearch}>Eu escolho você!</button>
+      <div>
+        <input
+          type="text"
+          onChange={(e) => {
+            setPokemon(e.target.value);
+          }}
+        ></input>
+        <button onClick={handleSearch}>Eu escolho você!</button>
+      </div>
       {poki && (
         <div>
           <img src={poki.sprites.front_default} />
